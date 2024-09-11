@@ -24,10 +24,19 @@ class EmailController{
                 mensagemFormatada
             );
 
-            res.status(201).send({status: "email enviado com sucesso"});
+            res.status(201).send({
+                status: 201,
+                ok: true,
+                mensagem: "email enviado com sucesso"
+            });
 
         } catch (error) {
-            res.status(500).send({status: "erro ao enviar email", ...error});
+            res.status(500).send({
+                status: 201,
+                ok: false,
+                mensagem: "erro ao enviar email",
+                 ...error
+            });
         }
     } 
 
