@@ -8,7 +8,7 @@ class EmailController{
         //formatando os dados antes de enviar
         const subject = `${process.env.EMAIL_SUBJECT} ${name}` 
         const mensagemFormatada = `
-        <h1>Mensagem enviada ${new Date().toLocaleString()}<h1/>
+        <h1>Mensagem enviada ${new Date().toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' })}<h1/>
         <p>
             - nome do cliente: ${name}<br>
             - email: ${email}<br>
